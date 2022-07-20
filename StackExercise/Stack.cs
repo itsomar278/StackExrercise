@@ -13,7 +13,7 @@
         }
 
 
-        public void peek()
+        public void peak()
         {
         T item = list [currentIndex];
         Console.WriteLine(item);

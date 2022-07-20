@@ -13,9 +13,11 @@
         }
 
 
-        public T peek()
+        public void peek()
         {
-        return list [currentIndex]; 
+        T item = list [currentIndex];
+        Console.WriteLine(item);
+
         }
 
 

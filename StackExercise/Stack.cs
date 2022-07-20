@@ -25,6 +25,18 @@
         currentIndex --;
         return item;
         }
+
+        public void print ()
+        {
+
+        foreach (T item in list)
+        {
+            Console.WriteLine (item);
+        }
+
+        }
+
+
         
     
 

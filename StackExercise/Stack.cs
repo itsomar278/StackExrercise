@@ -11,9 +11,19 @@
             list.Add (item);
             currentIndex++;
         }
+
+
         public T peek()
         {
         return list [currentIndex]; 
+        }
+
+
+        public T pop()
+        {
+        T item = list [currentIndex]; 
+        currentIndex --;
+        return item;
         }
         
     

@@ -11,6 +11,11 @@
             list.Add (item);
             currentIndex++;
         }
+        public T peek()
+        {
+        return list [currentIndex]; 
+        }
+        
     
 
 

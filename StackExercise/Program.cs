@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Stack;
-public partial class program
+public  class program
 {
 
    static void  Main ()

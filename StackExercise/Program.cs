@@ -15,9 +15,10 @@ public class program
         stack.pop();
         stack.peak();
         stack.clear();
-        stack.print();
-         
-    
+        stack.peak();
+
+
+
     }
 
 

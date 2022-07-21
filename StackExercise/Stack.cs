@@ -5,7 +5,7 @@
     {
 
         List<T> list = new List<T> (); 
-        private static int  currentIndex = -1 ; 
+        private  int  currentIndex = -1 ; 
         public void  push (T item)
         {
             list.Add (item);
@@ -39,7 +39,11 @@
         }
 
 
-        
+        public void clear()
+        {
+        list.Clear ();
+        currentIndex = -1;
+        }
     
 
 

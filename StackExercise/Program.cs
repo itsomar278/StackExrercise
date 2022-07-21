@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 
 namespace Stack;
-public  class program
+public class program
 {
 
    static void  Main ()
     {
-        Console.WriteLine("OMAR");
+        Stack<int> stack = new Stack<int> ();
+        stack.push (1);
+        stack.push (2);
+        stack.push (3); 
+        stack.print ();
+        stack.pop();
+        stack.peak();
+        stack.clear();
+        stack.print();
+         
     
     }
 

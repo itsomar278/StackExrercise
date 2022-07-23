@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 
 namespace Stack;
-public class program
+public partial class program
 {
 
    static void  Main ()
     {
-        Stack<int> stack = new Stack<int> ();
-        stack.push (1);
-        stack.push (2);
-        stack.push (3); 
-        stack.print ();
+        ListStack<int> stack = new ListStack<int>();
+       
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.print();
         stack.pop();
         stack.peak();
         stack.clear();
-        stack.peak();
+        stack.pop();
+        stack.print();
 
 
 
     }
-
 
 }

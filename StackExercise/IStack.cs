@@ -4,7 +4,7 @@
     {
         void clear();
         void peak();
-        T pop();
+        public T pop();
         void print();
         void push(T item);
     }

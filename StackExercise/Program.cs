@@ -5,12 +5,12 @@ namespace Stack;
 public partial class program
 {
 
-   static void  Main ()
+    static void  Main ()
     {
+        /*
         ListStack<int> stack = new ListStack<int>();
-        Stack<int> stack2 = new Stack<int>();
-        stack2.Pop();
-       /*
+     
+       
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -21,7 +21,9 @@ public partial class program
         stack.clear();
         stack.pop();
         stack.print();
-       */
+        */
+
+       
 
 
     }

@@ -7,7 +7,7 @@ public partial class program
         private readonly List<T> _stack = new List<T>();
         public ListStack()
         {
-         
+            
         }
          
         public void clear()
@@ -18,38 +18,41 @@ public partial class program
         public void peak()
         {
            
-            try
+           if (_stack.Count == 0 )
             {
-                Console.WriteLine(_stack.Last());
+
+                InvalidOperationException ex = new InvalidOperationException();
+                Console.WriteLine("you cant pop from an empty stack !");
+                throw ex;
             }
-            catch(Exception ex)
+           else
             {
-                Console.WriteLine(ex.Message);
+                T item = _stack.Last();
+                Console.WriteLine(item);
             }
    
         }
 
         public T pop()
         {
-            try
+            if (_stack.Count == 0)
+            { 
+                InvalidOperationException ex = new InvalidOperationException();
+                Console.WriteLine("you cant pop from an empty stack !");
+                throw ex;
+            }
+            else
             {
-                T item = _stack.Last();
+              T item = _stack.Last();
                 _stack.Remove(_stack.Last());
                 return item;
             }
-            catch (Exception e )
-            {
-                T item = default(T);
-                Console.WriteLine(e.Message);
-                return item; 
-               
-            }
+            
         }
 
         public void print()
         {
-            try
-            {
+          
                 if (_stack.Count == 0)
                 {
                     Console.WriteLine(" THE STACK IS EMPTY !");
@@ -62,12 +65,7 @@ public partial class program
                     }
 
                 }
-            }
-            catch
-            {
-
-            }
-           
+            
         }
 
         public void push(T item)

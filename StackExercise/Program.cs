@@ -23,7 +23,22 @@ public partial class program
         stack.print();
         */
 
-       
+        LinkedStack<int> stack = new LinkedStack<int>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.print();
+        Console.WriteLine(stack.pop());
+        stack.peak();
+        stack.clear();
+        stack.print();
+
+
+
+
+
+
 
 
     }

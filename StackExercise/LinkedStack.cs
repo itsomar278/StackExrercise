@@ -4,7 +4,11 @@ public partial class program
     public class LinkedStack<T> : IStack<T>
     {
 
-        LinkedList<T> _stack = new LinkedList<T>();
+        private readonly LinkedList<T> _stack = new LinkedList<T>();
+        public LinkedStack()
+        {
+
+        }
         public void clear()
         {
             _stack.Clear();

@@ -14,7 +14,7 @@ public partial class program
         {
             _stack.Clear();
         }
-
+         
         public void peak()
         {
            
@@ -50,22 +50,20 @@ public partial class program
             
         }
 
-        public void print()
+        public void print(Action<String> p)
         {
-          
-                if (_stack.Count == 0)
-                {
-                    Console.WriteLine(" THE STACK IS EMPTY !");
-                }
-                else
-                {
-                    foreach (T item in _stack)
-                    {
-                        Console.WriteLine(item);
-                    }
 
+            if (_stack.Count() == 0)
+            {
+                Console.WriteLine("stack is empty");
+            }
+            else
+            {
+                foreach (T item in _stack)
+                {
+                    p(item.ToString());
                 }
-            
+            }
         }
 
         public void push(T item)

@@ -4,10 +4,10 @@ public partial class program
     public class LinkedStack<T> : IStack<T>
     {
 
-        private readonly LinkedList<T> _stack = new LinkedList<T>();
+        private readonly LinkedList<T> _stack;
         public LinkedStack()
         {
-
+         _stack = new LinkedList<T>(); 
         }
         public void clear()
         {
@@ -43,21 +43,19 @@ public partial class program
             }
         }
 
-        public void print()
+        public void print(Action<String> p)
         {
             if (_stack.Count() == 0)
             {
-                InvalidOperationException ex = new InvalidOperationException();
-                throw ex;
+                Console.WriteLine("stack is empty");
             }
             else
             {
                 foreach (T item in _stack)
                 {
-                    Console.WriteLine(item);
+                    p(item.ToString());
                 }
             }
-            
         }
 
         public void push(T item)

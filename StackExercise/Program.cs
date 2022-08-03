@@ -4,22 +4,22 @@ using System.Collections.Generic;
 namespace Stack;
 public partial class program
 {
-    
 
-    static void consPrint(String s)
+
+    static void consPrint(String s) // printing method by user using the Action delegate print 
     {
         Console.WriteLine(s);
     }
-        
 
-  
-    static void  Main ()
+
+
+    static void Main()
     {
-        Action<String> print = new Action<String>(consPrint);
+        Action<String> print = new Action<String>(consPrint); // delegate for customizing the print pattern by user
 
-        ListStack<int> stack = new ListStack<int>();
-     
-       
+        ListStack<int> stack = new ListStack<int>(); // new List stack initialized 
+
+        // some commands on the stack 
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -29,9 +29,9 @@ public partial class program
         stack.peak();
         stack.clear();
         stack.print(print);
-        
-        
-       
+
+
+        // new LinkedList stack initialized 
         LinkedStack<int> stack2 = new LinkedStack<int>();
         stack2.push(1);
         stack2.push(2);
@@ -42,9 +42,9 @@ public partial class program
         stack2.peak();
         stack2.clear();
         stack2.print(print);
-     
 
-     
+
+
 
 
 

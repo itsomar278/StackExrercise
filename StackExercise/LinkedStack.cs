@@ -7,7 +7,7 @@ public partial class program
         private readonly LinkedList<T> _stack;
         public LinkedStack()
         {
-         _stack = new LinkedList<T>(); 
+            _stack = new LinkedList<T>();
         }
         public void clear()
         {
@@ -24,7 +24,7 @@ public partial class program
             else
             {
                 T item = _stack.Last();
-                Console.WriteLine(item);  
+                Console.WriteLine(item);
             }
         }
 
